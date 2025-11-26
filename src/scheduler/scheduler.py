@@ -63,6 +63,9 @@ class NewsScheduler:
         if job_id in self.jobs:
             self.remove_job(job_id)
         
+        # Add session_id to callback kwargs
+        callback_kwargs['session_id'] = session_id
+        
         # Add new job
         job = self.scheduler.add_job(
             callback,
