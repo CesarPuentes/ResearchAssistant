@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# News Aggregation CLI - Bash Launcher
+# This script provides a convenient way to run the news aggregation system from anywhere
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Change to project directory
+cd "$SCRIPT_DIR" || exit 1
+
+# Check if virtual environment exists
+if [ ! -d "venv" ]; then
+    echo "Virtual environment not found. Creating one..."
+    python3 -m venv venv
+    
+    echo "Installing dependencies..."
+    source venv/bin/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+else
+    source venv/bin/activate
+fi
+
+# Run the main application with all arguments
+python3 main.py "$@"

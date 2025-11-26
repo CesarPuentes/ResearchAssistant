@@ -1,0 +1,32 @@
+# Core dependencies
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-openai>=0.0.5
+openai>=1.0.0
+
+# Web scraping and search
+duckduckgo-search>=4.0.0
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+lxml>=4.9.0
+
+# Scheduling
+apscheduler>=3.10.0
+pytz>=2024.1
+
+# Configuration
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
+
+# CLI
+click>=8.1.0
+rich>=13.0.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Email
+secure-smtplib>=0.1.1
+
+# Utilities
+python-dateutil>=2.8.0
